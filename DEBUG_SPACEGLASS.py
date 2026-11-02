@@ -162,7 +162,7 @@ def test_layer_3_rainmeter_ini(diag: DiagnosticReporter) -> None:
             part = text.split(f"[{s}]")[1].split("[")[0]
             if "Active=1" in part:
                 active_count += 1
-            if "AlwaysOnTop=1" in part:
+            if "AlwaysOnTop=-2" in part or "AlwaysOnTop=0" in part:
                 always_on_top_count += 1
 
     diag.record(
@@ -173,10 +173,9 @@ def test_layer_3_rainmeter_ini(diag: DiagnosticReporter) -> None:
     )
     diag.record(
         "Layer 3",
-        "AlwaysOnTop Floating Configuration",
+        "Desktop Z-Order Configuration (On Desktop)",
         always_on_top_count == 4,
-        f"{always_on_top_count}/4 SpaceGlass skins set to AlwaysOnTop=1 (Topmost)",
-        severity="INFO" if always_on_top_count == 4 else "WARN",
+        f"{always_on_top_count}/4 SpaceGlass skins pinned to Desktop layer (AlwaysOnTop=-2 / 0).",
     )
 
 
