@@ -117,7 +117,7 @@ def create_app(
     start_time = time.time()
 
     async def _periodic_sync_loop() -> None:
-        """Background sync loop: refreshes tasks every ~90s and calendar every ~5m when authenticated."""
+        """Background sync loop: refreshes tasks and calendar every 15 minutes when authenticated."""
         last_cal_sync = 0.0
         last_task_sync = 0.0
         while True:
@@ -138,14 +138,9 @@ def create_app(
                         await asyncio.to_thread(cal_svc.get_month_data, dt_now.year, dt_now.month, True)
                         await asyncio.to_thread(cal_svc.get_upcoming_events, 5, True)
                         last_cal_sync = now
-                await asyncio.to_thread(
-                    refresh_rainmeter_glass_windows,
-                    cfg.settings.blur_type,
-                    cfg.settings.glass_alpha,
-                )
             except Exception as exc:
                 logger.debug("Background sync cycle note: %s", exc)
-            await asyncio.sleep(30)
+            await asyncio.sleep(60)
 
     @contextlib.asynccontextmanager
     async def lifespan(_app: FastAPI):

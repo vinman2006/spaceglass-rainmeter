@@ -73,8 +73,8 @@ class SpaceGlassSettings(BaseModel):
     selected_calendar_id: str = "primary"
     selected_task_list_id: str = "@default"
     selected_task_list_name: str = "My Tasks"
-    calendar_refresh_seconds: int = Field(default=300, ge=60, le=3600)
-    tasks_refresh_seconds: int = Field(default=90, ge=30, le=1800)
+    calendar_refresh_seconds: int = Field(default=900, ge=60, le=3600)
+    tasks_refresh_seconds: int = Field(default=900, ge=30, le=3600)
     show_completed_tasks: bool = True
     collapse_completed_tasks: bool = False
 

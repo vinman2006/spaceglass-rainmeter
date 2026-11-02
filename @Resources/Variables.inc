@@ -43,19 +43,19 @@ WeatherRefreshSeconds=900
 ; --- Calendar Preferences ---
 ; WeekStartMonday: 0 = Sunday-first (matches reference screenshot), 1 = Monday-first
 WeekStartMonday=0
-CalendarRefreshSeconds=300
+CalendarRefreshSeconds=900
 SelectedCalendarId=primary
 GoogleCalendarWebUrl=https://calendar.google.com/calendar/r
 GoogleCalendarNewEventUrl=https://calendar.google.com/calendar/u/0/r/eventedit
 
 ; --- Events Preferences ---
 MaxUpcomingEvents=4
-EventsRefreshSeconds=300
+EventsRefreshSeconds=900
 
 ; --- Tasks Preferences ---
 SelectedTaskListId=@default
 SelectedTaskListName=My Tasks
-TasksRefreshSeconds=90
+TasksRefreshSeconds=900
 ShowCompletedTasks=1
 CollapseCompletedTasks=0
 GoogleTasksWebUrl=https://tasks.google.com/
