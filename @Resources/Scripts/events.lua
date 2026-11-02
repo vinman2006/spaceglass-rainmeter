@@ -9,6 +9,10 @@ local currentEvents = {}
 local slotY = { 50, 90, 130 }
 local defaultColors = { "166,108,219", "88,166,255", "255,122,24" }
 
+local function getScale()
+    return tonumber(SKIN:GetVariable('Scale', '1.0')) or 1.0
+end
+
 function Initialize()
     local scriptDir = SKIN:GetVariable('@') .. 'Scripts\\'
     local ok, mod = pcall(dofile, scriptDir .. 'json_helper.lua')
@@ -80,13 +84,18 @@ function OnEventsReceived()
     SKIN:Bang('!SetOption', 'MeterConnectBtnText', 'Hidden', '1')
     HideAllEventSlots()
 
+    local scale = getScale()
     local count = math.min(#items, 2)
     for i = 1, count do
         local ev = items[i]
         local barColor = ev.color_rgb or defaultColors[i] or "166,108,219"
-        local yBar = slotY[i]
+        local yBar = math.floor(slotY[i] * scale + 0.5)
+        local barX = math.floor(22 * scale + 0.5)
+        local barW = math.floor(4 * scale + 0.5)
+        local barH = math.floor(30 * scale + 0.5)
+        local barR = math.floor(2 * scale + 0.5)
         SKIN:Bang('!SetOption', 'MeterEventBar' .. i, 'Shape',
-            string.format("Rectangle 22,%d,4,30,2 | Fill Color %s,255 | StrokeWidth 0", yBar, barColor))
+            string.format("Rectangle %d,%d,%d,%d,%d | Fill Color %s,255 | StrokeWidth 0", barX, yBar, barW, barH, barR, barColor))
         SKIN:Bang('!SetOption', 'MeterEventBar' .. i, 'Hidden', '0')
 
         SKIN:Bang('!SetOption', 'MeterEventTitle' .. i, 'Text', ev.title or "(No title)")

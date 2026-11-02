@@ -14,9 +14,13 @@ local selectedDateUrl = nil
 local monthEventsByDay = {} -- day_number -> { count = n, color = "166,108,219", events = {...} }
 local isOfflineCached = false
 
--- Grid geometry matching Calendar.ini (7 cols x 6 rows)
-local colCentersX = { 33, 77, 121, 165, 209, 253, 297 }
-local rowStartY   = { 68, 93, 118, 143, 168, 193 }
+-- Base grid geometry (7 cols x 6 rows) scaled dynamically via getScale()
+local baseCols = { 33, 77, 121, 165, 209, 253, 297 }
+local baseRows = { 68, 93, 118, 143, 168, 193 }
+
+local function getScale()
+    return tonumber(SKIN:GetVariable('Scale', '1.0')) or 1.0
+end
 
 local monthNames = {
     "January", "February", "March", "April", "May", "June",
@@ -187,13 +191,14 @@ function RenderCalendarGrid()
 
     local todayPillHidden = "1"
     local selectedRingHidden = "1"
+    local scale = getScale()
 
     for cell = 1, 42 do
         local dayNum = cell - offset
         local col = ((cell - 1) % 7) + 1
         local row = math.floor((cell - 1) / 7) + 1
-        local cx = colCentersX[col]
-        local cy = rowStartY[row]
+        local cx = math.floor(baseCols[col] * scale + 0.5)
+        local cy = math.floor(baseRows[row] * scale + 0.5)
 
         local cellName = 'MeterCell' .. cell
         local dotName  = 'MeterDot' .. cell
@@ -208,10 +213,13 @@ function RenderCalendarGrid()
             if isToday then
                 SKIN:Bang('!SetOption', cellName, 'FontWeight', '700')
                 SKIN:Bang('!SetOption', cellName, 'FontColor', '#TextPrimary#')
-                local pillX = cx - 16
-                local pillY = cy - 5
+                local pillW = math.floor(32 * scale + 0.5)
+                local pillH = math.floor(24 * scale + 0.5)
+                local pillR = math.floor(12 * scale + 0.5)
+                local pillX = math.floor(cx - (16 * scale) + 0.5)
+                local pillY = math.floor(cy - (5 * scale) + 0.5)
                 SKIN:Bang('!SetOption', 'MeterTodayPill', 'Shape',
-                    string.format("Rectangle %d,%d,32,24,12 | Fill Color #AccentOrange#,255 | StrokeWidth 0", pillX, pillY))
+                    string.format("Rectangle %d,%d,%d,%d,%d | Fill Color #AccentOrange#,255 | StrokeWidth 0", pillX, pillY, pillW, pillH, pillR))
                 todayPillHidden = "0"
             else
                 SKIN:Bang('!SetOption', cellName, 'FontWeight', '400')
@@ -219,18 +227,24 @@ function RenderCalendarGrid()
             end
 
             if selectedDay == dayNum and not isToday then
-                local ringX = cx - 16
-                local ringY = cy - 5
+                local ringW = math.floor(32 * scale + 0.5)
+                local ringH = math.floor(24 * scale + 0.5)
+                local ringR = math.floor(12 * scale + 0.5)
+                local ringX = math.floor(cx - (16 * scale) + 0.5)
+                local ringY = math.floor(cy - (5 * scale) + 0.5)
+                local strokeW = math.max(1, math.floor(1 * scale + 0.5))
                 SKIN:Bang('!SetOption', 'MeterSelectedDateRing', 'Shape',
-                    string.format("Rectangle %d,%d,32,24,12 | Fill Color 255,255,255,22 | StrokeWidth 1 | Stroke Color #CosmicBlue#,220", ringX, ringY))
+                    string.format("Rectangle %d,%d,%d,%d,%d | Fill Color 255,255,255,22 | StrokeWidth %d | Stroke Color #CosmicBlue#,220", ringX, ringY, ringW, ringH, ringR, strokeW))
                 selectedRingHidden = "0"
             end
 
             local evInfo = monthEventsByDay[dayNum]
             if evInfo and evInfo.count and evInfo.count > 0 then
                 local dotColor = evInfo.color or "166,108,219"
+                local dotR = math.max(2, math.floor(2 * scale + 0.5))
+                local dotY = math.floor(cy + (15 * scale) + 0.5)
                 SKIN:Bang('!SetOption', dotName, 'Shape',
-                    string.format("Ellipse %d,%d,2,2 | Fill Color %s,255 | StrokeWidth 0", cx, cy + 15, dotColor))
+                    string.format("Ellipse %d,%d,%d,%d | Fill Color %s,255 | StrokeWidth 0", cx, dotY, dotR, dotR, dotColor))
                 SKIN:Bang('!SetOption', dotName, 'Hidden', '0')
             else
                 SKIN:Bang('!SetOption', dotName, 'Hidden', '1')

@@ -39,6 +39,11 @@ BgGradTop=32,24,20,215
 BgGradBottom=22,16,14,230
 CardBorder=255,255,255,28
 
+; Dual Specular Highlights
+GlassBorderOuter=255,255,255,28
+GlassBorderInner=255,255,255,16
+GlassHighlightTop=255,255,255,35
+
 ; Backward compatibility tokens
 GlassBaseRGB=28,20,18
 GlassAlpha=95
@@ -46,11 +51,8 @@ GlassSurface=28,20,18,220
 GlassGradientTop=32,24,20,215
 GlassGradientBottom=22,16,14,230
 GlassAmbientWarm=240,123,26,18
-GlassBorderOuter=255,255,255,28
-GlassBorderInner=255,255,255,15
-GlassHighlightTop=255,255,255,35
 GlassCornerRadius=22
-GlassBorderWidth=1
+GlassBorderWidth=(1 * #Scale#)
 
 ; --- Typography ---
 FontPrimary=Segoe UI Variable Display
@@ -61,11 +63,11 @@ FontWeightMedium=500
 FontWeightSemibold=600
 FontWeightBold=700
 
-; Font Sizes
-FontSizeClock=32
-FontSizeWeatherTemp=16
-FontSizeHeader=11
+; Font Sizes (Scalable with High-DPI Scale factor)
+FontSizeClock=(34 * #Scale#)
+FontSizeWeatherTemp=(16 * #Scale#)
+FontSizeHeader=(11.5 * #Scale#)
 FontSizeBody=10
-FontSizeSub=9
-FontSizeCalendarDayHeader=8
-FontSizeCalendarDate=9
+FontSizeSub=(9.5 * #Scale#)
+FontSizeCalendarDayHeader=(8.5 * #Scale#)
+FontSizeCalendarDate=(9.5 * #Scale#)

@@ -8,22 +8,26 @@ AppName=SpaceGlass
 AppVersion=1.0.0
 AppTagline=Your Universe. Your Schedule.
 
+; --- High-DPI & 4K Display Scaling Factor ---
+; Standard 1080p: 1.0 | 1440p / 125% DPI: 1.25 | 150% DPI: 1.5 | 4K / 200% DPI: 2.0
+Scale=1.25
+
 ; --- Backend Connection ---
 BackendHost=127.0.0.1
 BackendPort=8765
 BackendBaseUrl=http://127.0.0.1:8765
 
-; --- Unified Geometry & Layout Tokens ---
-CardWidth=330
-CardRadius=18
+; --- Unified Geometry & Layout Tokens (Scalable) ---
+CardWidth=(330 * #Scale#)
+CardRadius=(18 * #Scale#)
 RightMargin=24
 TopMargin=20
 WidgetGap=14
 
-ClockHeight=105
-CalendarHeight=224
-EventsHeight=135
-TasksHeight=135
+ClockHeight=(105 * #Scale#)
+CalendarHeight=(224 * #Scale#)
+EventsHeight=(135 * #Scale#)
+TasksHeight=(135 * #Scale#)
 
 ; Backward compatibility alias
 WidgetWidth=320

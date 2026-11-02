@@ -14,7 +14,11 @@ local displayedTasks = {}
 local availableLists = {}
 local currentListId = "@default"
 local collapseCompleted = false
-local rowY = { 52, 84, 116, 148 }
+local rowY = { 52, 76, 100, 124 }
+
+local function getScale()
+    return tonumber(SKIN:GetVariable('Scale', '1.0')) or 1.0
+end
 
 function Initialize()
     local scriptDir = SKIN:GetVariable('@') .. 'Scripts\\'
@@ -115,7 +119,8 @@ function OnTasksReceived()
     SKIN:Bang('!SetOption', 'MeterTasksEmpty', 'Hidden', '1')
     HideAllTaskRows()
 
-    local count = math.min(#displayedTasks, 4)
+    local scale = getScale()
+    local count = math.min(#displayedTasks, 2)
     for i = 1, count do
         local task = displayedTasks[i]
         local isCompleted = (task.status == "completed")
@@ -131,10 +136,13 @@ function OnTasksReceived()
         SKIN:Bang('!SetOption', 'MeterTaskText' .. i, 'Hidden', '0')
 
         if isCompleted then
-            local approxWidth = math.min(200, math.max(40, string.len(titleStr) * 6.8))
-            local lineY = rowY[i] + 9
+            local approxWidth = math.min(200 * scale, math.max(40 * scale, string.len(titleStr) * 6.8 * scale))
+            local lineY = math.floor((rowY[i] + 9) * scale + 0.5)
+            local lineStartX = math.floor(48 * scale + 0.5)
+            local lineEndX = math.floor(lineStartX + approxWidth)
+            local strokeW = math.max(1.0, 1.2 * scale)
             SKIN:Bang('!SetOption', 'MeterTaskStrike' .. i, 'Shape',
-                string.format("Line 50,%d,%d,%d | StrokeWidth 1.2 | Stroke Color #TextMuted#", lineY, 50 + approxWidth, lineY))
+                string.format("Line %d,%d,%d,%d | StrokeWidth %0.1f | Stroke Color #TextMuted#", lineStartX, lineY, lineEndX, lineY, strokeW))
             SKIN:Bang('!SetOption', 'MeterTaskStrike' .. i, 'Hidden', '0')
         else
             SKIN:Bang('!SetOption', 'MeterTaskStrike' .. i, 'Hidden', '1')
