@@ -161,8 +161,11 @@ def refresh_rainmeter_glass_windows(blur_mode: str = "Acrylic", alpha: int = 95)
         cb_func = WNDENUMPROC(_enum_cb)
         user32.EnumWindows(cb_func, 0)
 
+        # RainmeterMeterWindow handles its own vector rounded corners via [MeterShape].
+        # Applying rectangular DWM acrylic blur to RainmeterMeterWindow causes dark rectangular
+        # corner bleeding outside the rounded 18px corners. We set ACCENT_DISABLED on Rainmeter.
         for hwnd in matched_hwnds:
-            if apply_win11_glass_to_hwnd(hwnd, blur_mode=blur_mode, alpha=alpha):
+            if apply_win11_glass_to_hwnd(hwnd, blur_mode="none", alpha=0):
                 applied_count += 1
     except Exception as exc:
         logger.debug("Rainmeter window enumeration skipped: %s", exc)

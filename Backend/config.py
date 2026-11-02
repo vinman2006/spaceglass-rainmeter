@@ -90,7 +90,7 @@ class SpaceGlassSettings(BaseModel):
 
 
 ACCENT_RGB_MAP = {
-    "orange": "255,122,24",
+    "orange": "56,139,253",
     "violet": "166,108,219",
     "blue": "88,166,255",
 }

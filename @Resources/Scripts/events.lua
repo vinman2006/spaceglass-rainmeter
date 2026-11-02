@@ -64,7 +64,7 @@ function OnEventsReceived()
         SetEmptyState("Connect Google Account in Settings to view events.", true)
         return
     else
-        local badge = (payload.source == "cache") and "Cached" or ""
+        local badge = (payload.warning and payload.warning ~= "") and "Cached" or ""
         SKIN:Bang('!SetOption', 'MeterSyncBadge', 'Text', badge)
         SKIN:Bang('!SetOption', 'MeterSyncBadgeBg', 'Hidden', (badge == "") and "1" or "0")
         SKIN:Bang('!SetOption', 'MeterConnectBtnBg', 'Hidden', '1')

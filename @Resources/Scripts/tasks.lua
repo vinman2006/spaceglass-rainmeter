@@ -75,7 +75,7 @@ function OnTasksReceived()
         ShowEmptyMessage("Connect Google Account in Settings to sync Tasks.", true)
         return
     else
-        local badge = (payload.source == "cache") and "Cached" or ""
+        local badge = (payload.warning and payload.warning ~= "") and "Cached" or ""
         SKIN:Bang('!SetOption', 'MeterTasksStatusBadge', 'Text', badge)
         SKIN:Bang('!SetOption', 'MeterTasksStatusBadgeBg', 'Hidden', (badge == "") and "1" or "0")
         SKIN:Bang('!SetOption', 'MeterTasksConnectBtnBg', 'Hidden', '1')

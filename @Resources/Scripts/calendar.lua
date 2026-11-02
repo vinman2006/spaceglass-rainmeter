@@ -242,7 +242,7 @@ function RenderCalendarGrid()
             if evInfo and evInfo.count and evInfo.count > 0 then
                 local dotColor = evInfo.color or "166,108,219"
                 local dotR = math.max(2, math.floor(2 * scale + 0.5))
-                local dotY = math.floor(cy + (15 * scale) + 0.5)
+                local dotY = math.floor(cy + (17 * scale) + 0.5)
                 SKIN:Bang('!SetOption', dotName, 'Shape',
                     string.format("Ellipse %d,%d,%d,%d | Fill Color %s,255 | StrokeWidth 0", cx, dotY, dotR, dotR, dotColor))
                 SKIN:Bang('!SetOption', dotName, 'Hidden', '0')

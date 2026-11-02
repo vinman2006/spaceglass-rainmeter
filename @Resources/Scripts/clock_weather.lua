@@ -84,7 +84,7 @@ function OnWeatherResponse()
     if json_helper then
         local data = json_helper.decode(raw)
         if data and data.available == true and data.temperature ~= nil then
-            local tempText = tostring(math.floor(tonumber(data.temperature) + 0.5)) .. string.char(194, 176)
+            local tempText = tostring(math.floor(tonumber(data.temperature) + 0.5)) .. '[\x00B0]'
             local cityText = data.city or SKIN:GetVariable('CityName', 'Nagpur')
             local iconName = data.icon or 'weather_partly_cloudy.png'
             SKIN:Bang('!SetOption', 'MeterWeatherTemp', 'Text', tempText)
@@ -101,7 +101,7 @@ function OnWeatherResponse()
     local city = string.match(raw, '"city"%s*:%s*"([^"]+)"')
     local icon = string.match(raw, '"icon"%s*:%s*"([^"]+)"')
     if avail and temp then
-        local tempRounded = tostring(math.floor(tonumber(temp) + 0.5)) .. string.char(194, 176)
+        local tempRounded = tostring(math.floor(tonumber(temp) + 0.5)) .. '[\x00B0]'
         SKIN:Bang('!SetOption', 'MeterWeatherTemp', 'Text', tempRounded)
         if city then
             SKIN:Bang('!SetOption', 'MeterWeatherCity', 'Text', city)
