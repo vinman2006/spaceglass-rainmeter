@@ -1,12 +1,12 @@
 ; ============================================================================
 ; SPACEGLASS — CENTRAL THEME & GLASSMORPHISM DESIGN SYSTEM (@Resources/Theme.inc)
-; Reproduced from the SpaceGlass Windows 11 reference design specification
+; Unified Visual Styling: Warm Charcoal / Espresso Glassmorphism
 ; ============================================================================
 [Variables]
-; --- Core Color Palette (RGB and RGBA values for Rainmeter Shape & String meters) ---
-; Primary Orange (#FF7A18)
-AccentOrange=255,122,24
-AccentOrangeHex=FF7A18
+; --- Core Color Palette ---
+; Primary Orange (#F07B1A)
+AccentOrange=240,123,26
+AccentOrangeHex=F07B1A
 
 ; Amber (#FFB45C)
 AccentAmber=255,180,92
@@ -20,11 +20,9 @@ CosmicVioletHex=A66CDB
 CosmicBlue=88,166,255
 CosmicBlueHex=58A6FF
 
-; Soft White (#F5F3F7)
+; Soft White & Muted Text
 TextPrimary=245,243,247,255
 TextPrimaryRGB=245,243,247
-
-; Muted Text (#C5BECF)
 TextMuted=197,190,207,215
 TextMutedRGB=197,190,207
 TextDimmed=197,190,207,135
@@ -32,32 +30,27 @@ TextDimmed=197,190,207,135
 ; Danger / Overdue Red
 DangerColor=255,107,107,255
 
-; Active Accent (can be switched to #AccentOrange#, #CosmicViolet#, or #CosmicBlue#)
+; Active Accent
 ActiveAccent=255,122,24
 
 ; --- Glassmorphism Surface Parameters ---
-; Base glass fill: rgba(35, 30, 42, 0.35) -> Alpha ~ 90/255 (configurable via GlassAlpha)
-GlassBaseRGB=35,30,42
+; Deep warm charcoal / espresso tones with subtle diagonal gradient
+BgGradTop=32,24,20,215
+BgGradBottom=22,16,14,230
+CardBorder=255,255,255,28
+
+; Backward compatibility tokens
+GlassBaseRGB=28,20,18
 GlassAlpha=95
-GlassSurface=#GlassBaseRGB#,#GlassAlpha#
-
-; Subtle warm nebula reflection gradient top-left to bottom-right
-GlassGradientTop=55,42,58,110
-GlassGradientBottom=28,24,36,85
-GlassAmbientWarm=255,122,24,22
-
-; Specular glass border: rgba(255, 255, 255, 0.20) -> 255,255,255,51
-GlassBorderOuter=255,255,255,54
-GlassBorderInner=255,255,255,22
-GlassHighlightTop=255,255,255,80
+GlassSurface=28,20,18,220
+GlassGradientTop=32,24,20,215
+GlassGradientBottom=22,16,14,230
+GlassAmbientWarm=240,123,26,18
+GlassBorderOuter=255,255,255,28
+GlassBorderInner=255,255,255,15
+GlassHighlightTop=255,255,255,35
 GlassCornerRadius=22
-GlassBorderWidth=1.2
-
-; --- Windows 11 DWM Blur Mode ---
-; Options: Acrylic | Blur | Mica | None
-; Paired with FrostedGlass.dll and Backend/glass_effect.py DWM API helper
-BlurType=Acrylic
-BlurBorder=None
+GlassBorderWidth=1
 
 ; --- Typography ---
 FontPrimary=Segoe UI Variable Display
@@ -68,8 +61,8 @@ FontWeightMedium=500
 FontWeightSemibold=600
 FontWeightBold=700
 
-; Font Sizes (Matches reference proportions closely)
-FontSizeClock=34
+; Font Sizes
+FontSizeClock=32
 FontSizeWeatherTemp=16
 FontSizeHeader=11
 FontSizeBody=10

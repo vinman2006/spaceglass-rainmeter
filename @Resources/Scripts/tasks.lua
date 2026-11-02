@@ -38,10 +38,13 @@ function HideAllTaskRows()
     end
 end
 
-function ShowEmptyMessage(msg)
+function ShowEmptyMessage(msg, showConnectBtn)
     HideAllTaskRows()
     SKIN:Bang('!SetOption', 'MeterTasksEmpty', 'Text', msg)
     SKIN:Bang('!SetOption', 'MeterTasksEmpty', 'Hidden', '0')
+    local btnHidden = showConnectBtn and '0' or '1'
+    SKIN:Bang('!SetOption', 'MeterTasksConnectBtnBg', 'Hidden', btnHidden)
+    SKIN:Bang('!SetOption', 'MeterTasksConnectBtnText', 'Hidden', btnHidden)
     SKIN:Bang('!UpdateMeter', '*')
     SKIN:Bang('!Redraw')
 end
@@ -51,25 +54,28 @@ function OnTasksReceived()
     if not measure then return end
     local raw = measure:GetStringValue()
     if not raw or raw == "" then
-        ShowEmptyMessage("Backend unavailable. Retrying...")
+        ShowEmptyMessage("Backend unavailable. Retrying...", false)
         return
     end
 
     if not json_helper then return end
     local payload = json_helper.decode(raw)
     if not payload then
-        ShowEmptyMessage("Unable to parse tasks response.")
+        ShowEmptyMessage("Unable to parse tasks response.", false)
         return
     end
 
-    if payload.source == "cache" then
-        SKIN:Bang('!SetOption', 'MeterTasksStatusBadge', 'Text', 'Cached')
-    elseif payload.authenticated == false then
+    if payload.authenticated == false then
         SKIN:Bang('!SetOption', 'MeterTasksStatusBadge', 'Text', 'Not linked')
-        ShowEmptyMessage("Connect Google Account in Settings to sync Tasks.")
+        SKIN:Bang('!SetOption', 'MeterTasksStatusBadgeBg', 'Hidden', '0')
+        ShowEmptyMessage("Connect Google Account in Settings to sync Tasks.", true)
         return
     else
-        SKIN:Bang('!SetOption', 'MeterTasksStatusBadge', 'Text', '')
+        local badge = (payload.source == "cache") and "Cached" or ""
+        SKIN:Bang('!SetOption', 'MeterTasksStatusBadge', 'Text', badge)
+        SKIN:Bang('!SetOption', 'MeterTasksStatusBadgeBg', 'Hidden', (badge == "") and "1" or "0")
+        SKIN:Bang('!SetOption', 'MeterTasksConnectBtnBg', 'Hidden', '1')
+        SKIN:Bang('!SetOption', 'MeterTasksConnectBtnText', 'Hidden', '1')
     end
 
     if payload.list_title and payload.list_title ~= "" then
@@ -155,6 +161,10 @@ end
 
 function OnTasksError()
     SKIN:Bang('!SetOption', 'MeterTasksStatusBadge', 'Text', 'Offline')
+    SKIN:Bang('!SetOption', 'MeterTasksStatusBadgeBg', 'Hidden', '0')
+    if #displayedTasks == 0 then
+        ShowEmptyMessage("SpaceGlass backend is offline.", false)
+    end
 end
 
 function ToggleTask(slotIndex)

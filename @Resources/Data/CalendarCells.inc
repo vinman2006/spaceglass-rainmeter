@@ -5,12 +5,12 @@
 
 [MeterCell1]
 Meter=String
-X=35
-Y=65
+X=33
+Y=68
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
-FontWeight=700
+FontWeight=400
 StringAlign=Center
 AntiAlias=1
 Text="1"
@@ -20,14 +20,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(1)"]
 
 [MeterDot1]
 Meter=Shape
-Shape=Ellipse 35,81,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 33,83,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell2]
 Meter=String
-X=76
-Y=65
+X=77
+Y=68
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -41,14 +41,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(2)"]
 
 [MeterDot2]
 Meter=Shape
-Shape=Ellipse 76,81,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 77,83,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell3]
 Meter=String
-X=117
-Y=65
+X=121
+Y=68
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -62,14 +62,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(3)"]
 
 [MeterDot3]
 Meter=Shape
-Shape=Ellipse 117,81,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 121,83,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell4]
 Meter=String
-X=158
-Y=65
+X=165
+Y=68
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -83,14 +83,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(4)"]
 
 [MeterDot4]
 Meter=Shape
-Shape=Ellipse 158,81,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 165,83,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell5]
 Meter=String
-X=199
-Y=65
+X=209
+Y=68
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -104,14 +104,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(5)"]
 
 [MeterDot5]
 Meter=Shape
-Shape=Ellipse 199,81,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 209,83,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell6]
 Meter=String
-X=240
-Y=65
+X=253
+Y=68
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -125,14 +125,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(6)"]
 
 [MeterDot6]
 Meter=Shape
-Shape=Ellipse 240,81,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 253,83,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell7]
 Meter=String
-X=281
-Y=65
+X=297
+Y=68
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -146,14 +146,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(7)"]
 
 [MeterDot7]
 Meter=Shape
-Shape=Ellipse 281,81,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 297,83,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell8]
 Meter=String
-X=35
-Y=88
+X=33
+Y=93
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -167,14 +167,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(8)"]
 
 [MeterDot8]
 Meter=Shape
-Shape=Ellipse 35,104,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 33,108,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell9]
 Meter=String
-X=76
-Y=88
+X=77
+Y=93
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -188,14 +188,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(9)"]
 
 [MeterDot9]
 Meter=Shape
-Shape=Ellipse 76,104,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 77,108,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell10]
 Meter=String
-X=117
-Y=88
+X=121
+Y=93
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -209,14 +209,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(10)"]
 
 [MeterDot10]
 Meter=Shape
-Shape=Ellipse 117,104,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 121,108,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell11]
 Meter=String
-X=158
-Y=88
+X=165
+Y=93
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -230,14 +230,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(11)"]
 
 [MeterDot11]
 Meter=Shape
-Shape=Ellipse 158,104,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 165,108,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell12]
 Meter=String
-X=199
-Y=88
+X=209
+Y=93
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -251,14 +251,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(12)"]
 
 [MeterDot12]
 Meter=Shape
-Shape=Ellipse 199,104,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 209,108,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell13]
 Meter=String
-X=240
-Y=88
+X=253
+Y=93
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -272,14 +272,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(13)"]
 
 [MeterDot13]
 Meter=Shape
-Shape=Ellipse 240,104,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 253,108,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell14]
 Meter=String
-X=281
-Y=88
+X=297
+Y=93
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -293,14 +293,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(14)"]
 
 [MeterDot14]
 Meter=Shape
-Shape=Ellipse 281,104,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 297,108,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell15]
 Meter=String
-X=35
-Y=111
+X=33
+Y=118
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -314,14 +314,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(15)"]
 
 [MeterDot15]
 Meter=Shape
-Shape=Ellipse 35,127,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 33,133,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell16]
 Meter=String
-X=76
-Y=111
+X=77
+Y=118
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -335,14 +335,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(16)"]
 
 [MeterDot16]
 Meter=Shape
-Shape=Ellipse 76,127,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 77,133,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell17]
 Meter=String
-X=117
-Y=111
+X=121
+Y=118
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -356,14 +356,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(17)"]
 
 [MeterDot17]
 Meter=Shape
-Shape=Ellipse 117,127,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
-Hidden=0
+Shape=Ellipse 121,133,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Hidden=1
 DynamicVariables=1
 
 [MeterCell18]
 Meter=String
-X=158
-Y=111
+X=165
+Y=118
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -377,14 +377,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(18)"]
 
 [MeterDot18]
 Meter=Shape
-Shape=Ellipse 158,127,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 165,133,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell19]
 Meter=String
-X=199
-Y=111
+X=209
+Y=118
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -398,14 +398,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(19)"]
 
 [MeterDot19]
 Meter=Shape
-Shape=Ellipse 199,127,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 209,133,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell20]
 Meter=String
-X=240
-Y=111
+X=253
+Y=118
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -419,14 +419,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(20)"]
 
 [MeterDot20]
 Meter=Shape
-Shape=Ellipse 240,127,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 253,133,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell21]
 Meter=String
-X=281
-Y=111
+X=297
+Y=118
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -440,14 +440,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(21)"]
 
 [MeterDot21]
 Meter=Shape
-Shape=Ellipse 281,127,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 297,133,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell22]
 Meter=String
-X=35
-Y=134
+X=33
+Y=143
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -461,14 +461,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(22)"]
 
 [MeterDot22]
 Meter=Shape
-Shape=Ellipse 35,150,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 33,158,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell23]
 Meter=String
-X=76
-Y=134
+X=77
+Y=143
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -482,14 +482,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(23)"]
 
 [MeterDot23]
 Meter=Shape
-Shape=Ellipse 76,150,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 77,158,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell24]
 Meter=String
-X=117
-Y=134
+X=121
+Y=143
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -503,14 +503,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(24)"]
 
 [MeterDot24]
 Meter=Shape
-Shape=Ellipse 117,150,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
-Hidden=0
+Shape=Ellipse 121,158,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Hidden=1
 DynamicVariables=1
 
 [MeterCell25]
 Meter=String
-X=158
-Y=134
+X=165
+Y=143
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -524,14 +524,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(25)"]
 
 [MeterDot25]
 Meter=Shape
-Shape=Ellipse 158,150,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 165,158,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell26]
 Meter=String
-X=199
-Y=134
+X=209
+Y=143
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -545,14 +545,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(26)"]
 
 [MeterDot26]
 Meter=Shape
-Shape=Ellipse 199,150,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 209,158,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell27]
 Meter=String
-X=240
-Y=134
+X=253
+Y=143
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -566,14 +566,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(27)"]
 
 [MeterDot27]
 Meter=Shape
-Shape=Ellipse 240,150,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 253,158,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell28]
 Meter=String
-X=281
-Y=134
+X=297
+Y=143
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -587,14 +587,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(28)"]
 
 [MeterDot28]
 Meter=Shape
-Shape=Ellipse 281,150,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 297,158,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell29]
 Meter=String
-X=35
-Y=157
+X=33
+Y=168
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -608,14 +608,14 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(29)"]
 
 [MeterDot29]
 Meter=Shape
-Shape=Ellipse 35,173,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 33,183,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell30]
 Meter=String
-X=76
-Y=157
+X=77
+Y=168
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
@@ -629,258 +629,258 @@ LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(30)"]
 
 [MeterDot30]
 Meter=Shape
-Shape=Ellipse 76,173,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 77,183,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell31]
 Meter=String
-X=117
-Y=157
+X=121
+Y=168
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="31"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(31)"]
 
 [MeterDot31]
 Meter=Shape
-Shape=Ellipse 117,173,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 121,183,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell32]
 Meter=String
-X=158
-Y=157
+X=165
+Y=168
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="32"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(32)"]
 
 [MeterDot32]
 Meter=Shape
-Shape=Ellipse 158,173,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 165,183,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell33]
 Meter=String
-X=199
-Y=157
+X=209
+Y=168
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="33"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(33)"]
 
 [MeterDot33]
 Meter=Shape
-Shape=Ellipse 199,173,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 209,183,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell34]
 Meter=String
-X=240
-Y=157
+X=253
+Y=168
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="34"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(34)"]
 
 [MeterDot34]
 Meter=Shape
-Shape=Ellipse 240,173,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 253,183,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell35]
 Meter=String
-X=281
-Y=157
+X=297
+Y=168
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="35"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(35)"]
 
 [MeterDot35]
 Meter=Shape
-Shape=Ellipse 281,173,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 297,183,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell36]
 Meter=String
-X=35
-Y=178
+X=33
+Y=193
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="36"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(36)"]
 
 [MeterDot36]
 Meter=Shape
-Shape=Ellipse 35,194,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 33,208,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell37]
 Meter=String
-X=76
-Y=178
+X=77
+Y=193
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="37"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(37)"]
 
 [MeterDot37]
 Meter=Shape
-Shape=Ellipse 76,194,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 77,208,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell38]
 Meter=String
-X=117
-Y=178
+X=121
+Y=193
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="38"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(38)"]
 
 [MeterDot38]
 Meter=Shape
-Shape=Ellipse 117,194,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 121,208,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell39]
 Meter=String
-X=158
-Y=178
+X=165
+Y=193
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="39"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(39)"]
 
 [MeterDot39]
 Meter=Shape
-Shape=Ellipse 158,194,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 165,208,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell40]
 Meter=String
-X=199
-Y=178
+X=209
+Y=193
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="40"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(40)"]
 
 [MeterDot40]
 Meter=Shape
-Shape=Ellipse 199,194,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 209,208,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell41]
 Meter=String
-X=240
-Y=178
+X=253
+Y=193
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="41"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(41)"]
 
 [MeterDot41]
 Meter=Shape
-Shape=Ellipse 240,194,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 253,208,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1
 
 [MeterCell42]
 Meter=String
-X=281
-Y=178
+X=297
+Y=193
 FontFace=#FontPrimary#
 FontSize=#FontSizeCalendarDate#
 FontColor=#TextPrimary#
 FontWeight=400
 StringAlign=Center
 AntiAlias=1
-Text=""
-Hidden=1
+Text="42"
+Hidden=0
 DynamicVariables=1
 LeftMouseUpAction=[!CommandMeasure MeasureCalendarScript "SelectDay(42)"]
 
 [MeterDot42]
 Meter=Shape
-Shape=Ellipse 281,194,2.2,2.2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
+Shape=Ellipse 297,208,2,2 | Fill Color #CosmicViolet#,255 | StrokeWidth 0
 Hidden=1
 DynamicVariables=1

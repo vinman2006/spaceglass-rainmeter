@@ -13,25 +13,39 @@ BackendHost=127.0.0.1
 BackendPort=8765
 BackendBaseUrl=http://127.0.0.1:8765
 
-; --- Screen & Positioning Defaults ---
-; Right-aligned floating stack: 24px from right edge, 20px from top edge
-WidgetWidth=320
+; --- Unified Geometry & Layout Tokens ---
+CardWidth=330
+CardRadius=18
 RightMargin=24
 TopMargin=20
 WidgetGap=14
 
-; Calculated X coordinate for right-aligned widgets on primary or target monitor
-DefaultX=(#WORKAREAX# + #WORKAREAWIDTH# - #WidgetWidth# - #RightMargin#)
+ClockHeight=105
+CalendarHeight=224
+EventsHeight=135
+TasksHeight=135
+
+; Backward compatibility alias
+WidgetWidth=320
+
+; --- Unified Color Tokens ---
+BgGradTop=32,24,20,215
+BgGradBottom=22,16,14,230
+CardBorder=255,255,255,28
+AccentOrange=240,123,26
+AccentOrangeHex=F07B1A
+
+; --- Calculated Coordinates ---
+DefaultX=(#WORKAREAX# + #WORKAREAWIDTH# - #CardWidth# - #RightMargin#)
 ClockY=(#WORKAREAY# + #TopMargin#)
-CalendarY=(#WORKAREAY# + #TopMargin# + 110 + #WidgetGap#)
-EventsY=(#WORKAREAY# + #TopMargin# + 110 + #WidgetGap# + 220 + #WidgetGap#)
-TasksY=(#WORKAREAY# + #TopMargin# + 110 + #WidgetGap# + 220 + #WidgetGap# + 160 + #WidgetGap#)
+CalendarY=(#WORKAREAY# + #TopMargin# + #ClockHeight# + #WidgetGap#)
+EventsY=(#WORKAREAY# + #TopMargin# + #ClockHeight# + #WidgetGap# + #CalendarHeight# + #WidgetGap#)
+TasksY=(#WORKAREAY# + #TopMargin# + #ClockHeight# + #WidgetGap# + #CalendarHeight# + #WidgetGap# + #EventsHeight# + #WidgetGap#)
 
 ; --- Clock & Weather Preferences ---
-; Use24Hour: 1 = 24-hour (19:30), 0 = 12-hour (07:30 PM)
 Use24Hour=1
 TimeFormat=%H:%M
-TimeFormat12=%I:%M
+TimeFormat12=%I:%M %p
 ShowAmPm=0
 CityName=Nagpur
 Latitude=21.1458
@@ -41,7 +55,6 @@ WeatherEnabled=1
 WeatherRefreshSeconds=900
 
 ; --- Calendar Preferences ---
-; WeekStartMonday: 0 = Sunday-first (matches reference screenshot), 1 = Monday-first
 WeekStartMonday=0
 CalendarRefreshSeconds=900
 SelectedCalendarId=primary

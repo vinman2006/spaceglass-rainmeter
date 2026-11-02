@@ -15,8 +15,8 @@ local monthEventsByDay = {} -- day_number -> { count = n, color = "166,108,219",
 local isOfflineCached = false
 
 -- Grid geometry matching Calendar.ini (7 cols x 6 rows)
-local colCentersX = { 35, 76, 117, 158, 199, 240, 281 }
-local rowStartY   = { 65, 88, 111, 134, 157, 178 }
+local colCentersX = { 33, 77, 121, 165, 209, 253, 297 }
+local rowStartY   = { 68, 93, 118, 143, 168, 193 }
 
 local monthNames = {
     "January", "February", "March", "April", "May", "June",
@@ -208,10 +208,10 @@ function RenderCalendarGrid()
             if isToday then
                 SKIN:Bang('!SetOption', cellName, 'FontWeight', '700')
                 SKIN:Bang('!SetOption', cellName, 'FontColor', '#TextPrimary#')
-                local pillX = cx - 15
-                local pillY = cy - 2
+                local pillX = cx - 16
+                local pillY = cy - 5
                 SKIN:Bang('!SetOption', 'MeterTodayPill', 'Shape',
-                    string.format("Rectangle %d,%d,30,19,9.5 | Fill Color #AccentOrange#,255 | StrokeWidth 0", pillX, pillY))
+                    string.format("Rectangle %d,%d,32,24,12 | Fill Color #AccentOrange#,255 | StrokeWidth 0", pillX, pillY))
                 todayPillHidden = "0"
             else
                 SKIN:Bang('!SetOption', cellName, 'FontWeight', '400')
@@ -219,10 +219,10 @@ function RenderCalendarGrid()
             end
 
             if selectedDay == dayNum and not isToday then
-                local ringX = cx - 15
-                local ringY = cy - 2
+                local ringX = cx - 16
+                local ringY = cy - 5
                 SKIN:Bang('!SetOption', 'MeterSelectedDateRing', 'Shape',
-                    string.format("Rectangle %d,%d,30,19,9.5 | Fill Color 255,255,255,22 | StrokeWidth 1.2 | Stroke Color #CosmicBlue#,220", ringX, ringY))
+                    string.format("Rectangle %d,%d,32,24,12 | Fill Color 255,255,255,22 | StrokeWidth 1 | Stroke Color #CosmicBlue#,220", ringX, ringY))
                 selectedRingHidden = "0"
             end
 
@@ -230,7 +230,7 @@ function RenderCalendarGrid()
             if evInfo and evInfo.count and evInfo.count > 0 then
                 local dotColor = evInfo.color or "166,108,219"
                 SKIN:Bang('!SetOption', dotName, 'Shape',
-                    string.format("Ellipse %d,%d,2.2,2.2 | Fill Color %s,255 | StrokeWidth 0", cx, cy + 16, dotColor))
+                    string.format("Ellipse %d,%d,2,2 | Fill Color %s,255 | StrokeWidth 0", cx, cy + 15, dotColor))
                 SKIN:Bang('!SetOption', dotName, 'Hidden', '0')
             else
                 SKIN:Bang('!SetOption', dotName, 'Hidden', '1')
